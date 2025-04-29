@@ -1,0 +1,39 @@
+prova dellla libreria per app 
+
+#ifndef LIBRERIA_H
+#define LIBRERIA_H
+
+
+
+#include<Arduino.h>
+#include <DHT22.h>
+#include<ArduinoBLE.h>
+
+
+class libreria {
+    public:
+    Bonezegei_DHT22();       // dht22 constructor
+    Bonezegei_DHT22(int8_t pin);   // dht22 
+    char begin(); // dht22 begin
+    char getData(); // dht22 getData
+    float getTemperature(); // dht22 getTemperature
+    float getHumidity( bool fahrenheit); // dht22 getHumidity
+    int getHumidity(); // dht22 getHumidity
+    
+
+
+   
+   
+
+      int8_t _pin;  //for the dht22
+      uint8_t data[6]; //for the dht22
+      unsigned long prevtime; //for the dht22
+
+      int _humidity; //for the dht22
+      float _temperatureDeg; //for the dht22
+        float _temperatureFar; //for the dht22
+
+
+
+};
+
